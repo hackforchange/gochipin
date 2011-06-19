@@ -1,4 +1,6 @@
 Gochipin::Application.routes.draw do
+  resources :events
+
   #get \"users\/show\"
 
   root :to => "home#index"

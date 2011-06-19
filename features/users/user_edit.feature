@@ -12,4 +12,4 @@ Feature: Edit User
       And I fill in "Current password" with "please"
       And I press "Update"
       And I go to the homepage
-      Then I should see "User: baz"
+      Then I should see "Signed in as baz"

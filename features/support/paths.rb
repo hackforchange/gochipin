@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new users_and_events page/
+      new_users_and_events_path
+
 
     when /the sign up page/
       '/users/sign_up'

@@ -1,3 +1,12 @@
-%h3 Home
-- @users.each do |user|
-  %p User: #{link_to user.name, user}
+%h4 Organizers
+
+%h5 Create an event
+
+= link_to 'Create Event', new_event_path  
+
+%h4 Volunteers
+
+%h5 Go chip in
+
+- @events.each do |event|
+  %p Event: #{link_to event.title, title}  
