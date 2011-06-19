@@ -154,6 +154,117 @@ body.bp .flash {
   text-align: center;
 }
 
+/* line 2, ../../app/stylesheets/partials/_actions.scss */
+body.bp .actions {
+  text-align: right;
+}
+/* line 4, ../../app/stylesheets/partials/_actions.scss */
+body.bp .actions .action {
+  margin: 0 6px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0.5em 1.5em;
+  line-height: 1.2em;
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #4fd82a;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4fd82a), color-stop(100%, #2b7717));
+  background: -webkit-linear-gradient(#4fd82a, #2b7717);
+  background: -moz-linear-gradient(#4fd82a, #2b7717);
+  background: -o-linear-gradient(#4fd82a, #2b7717);
+  background: linear-gradient(#4fd82a, #2b7717);
+  border-color: #2b7717;
+  color: white;
+  text-shadow: #2c7a16, 0 -1px 0;
+}
+/* line 23, ../../../.rvm/gems/ruby-1.9.2-p180/gems/sassy-buttons-0.0.5/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body.bp .actions .action:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61dc40), color-stop(100%, #338c1b));
+  background: -webkit-linear-gradient(#61dc40, #338c1b);
+  background: -moz-linear-gradient(#61dc40, #338c1b);
+  background: -o-linear-gradient(#61dc40, #338c1b);
+  background: linear-gradient(#61dc40, #338c1b);
+}
+/* line 7, ../../app/stylesheets/partials/_actions.scss */
+body.bp .actions .action.yellow {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0.5em 1.5em;
+  line-height: 1.2em;
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e4ea48;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e4ea48), color-stop(100%, #777214));
+  background: -webkit-linear-gradient(#e4ea48, #777214);
+  background: -moz-linear-gradient(#e4ea48, #777214);
+  background: -o-linear-gradient(#e4ea48, #777214);
+  background: linear-gradient(#e4ea48, #777214);
+  border-color: #777214;
+  color: white;
+  text-shadow: #a3a813, 0 -1px 0;
+}
+/* line 23, ../../../.rvm/gems/ruby-1.9.2-p180/gems/sassy-buttons-0.0.5/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body.bp .actions .action.yellow:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e7ed5f), color-stop(100%, #8d8718));
+  background: -webkit-linear-gradient(#e7ed5f, #8d8718);
+  background: -moz-linear-gradient(#e7ed5f, #8d8718);
+  background: -o-linear-gradient(#e7ed5f, #8d8718);
+  background: linear-gradient(#e7ed5f, #8d8718);
+}
+/* line 10, ../../app/stylesheets/partials/_actions.scss */
+body.bp .actions .action.blue {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0.5em 1.5em;
+  line-height: 1.2em;
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #52b1d8;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #52b1d8), color-stop(100%, #224077));
+  background: -webkit-linear-gradient(#52b1d8, #224077);
+  background: -moz-linear-gradient(#52b1d8, #224077);
+  background: -o-linear-gradient(#52b1d8, #224077);
+  background: linear-gradient(#52b1d8, #224077);
+  border-color: #224077;
+  color: white;
+  text-shadow: #217394, 0 -1px 0;
+}
+/* line 23, ../../../.rvm/gems/ruby-1.9.2-p180/gems/sassy-buttons-0.0.5/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body.bp .actions .action.blue:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #67badd), color-stop(100%, #284b8b));
+  background: -webkit-linear-gradient(#67badd, #284b8b);
+  background: -moz-linear-gradient(#67badd, #284b8b);
+  background: -o-linear-gradient(#67badd, #284b8b);
+  background: linear-gradient(#67badd, #284b8b);
+}
+
 /* line 2, ../../app/stylesheets/partials/_home.scss */
 body.home #container {
   width: 950px;
@@ -306,11 +417,64 @@ body.home #volunteer .upcoming ul li a:after {
 body.home #volunteer h4 {
   margin-bottom: 0;
 }
-/* line 70, ../../app/stylesheets/partials/_home.scss */
-body.home .inside {
+
+/* line 2, ../../app/stylesheets/partials/_details.scss */
+body.bp.details .details {
+  background-color: #FFF;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 147, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.bp.details .details {
+  overflow-x: hidden;
+}
+/* line 8, ../../app/stylesheets/partials/_details.scss */
+body.bp.details .actions {
+  min-height: 175px;
+  height: auto !important;
+  height: 175px;
+  background-color: #FFF;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+  margin-bottom: 15px;
+}
+/* line 147, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.bp.details .actions {
+  overflow-x: hidden;
+}
+/* line 14, ../../app/stylesheets/partials/_details.scss */
+body.bp.details .actions p:first-child {
+  margin: 0 0 1em 0;
+}
+/* line 17, ../../app/stylesheets/partials/_details.scss */
+body.bp.details .actions p:last-child {
+  margin: 0;
+}
+/* line 21, ../../app/stylesheets/partials/_details.scss */
+body.bp.details .actions .img {
+  text-align: right;
+}
+/* line 26, ../../app/stylesheets/partials/_details.scss */
+body.bp.details #map {
   overflow: hidden;
   *zoom: 1;
-  padding: 15px;
+  width: 935px;
 }
 
 /* line 1, ../../app/stylesheets/partials/_map.scss */
@@ -374,10 +538,10 @@ div#map {
   fill: #666;
 }
 
-/* line 38, ../../app/stylesheets/screen.scss */
+/* line 41, ../../app/stylesheets/screen.scss */
 body.bp {
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: #333333;
   font-size: 75%;
   background-color: #eeeeee;
@@ -694,9 +858,15 @@ body.bp .removed {
   background: #990000;
   color: white;
 }
-/* line 44, ../../app/stylesheets/screen.scss */
+/* line 47, ../../app/stylesheets/screen.scss */
 body.bp #container {
   padding-top: 1em;
+}
+/* line 50, ../../app/stylesheets/screen.scss */
+body.bp .inside {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 15px;
 }
 
 /* line 18, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
@@ -763,14 +933,14 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 54, ../../app/stylesheets/screen.scss */
+/* line 62, ../../app/stylesheets/screen.scss */
 body.one-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 57, ../../app/stylesheets/screen.scss */
+/* line 65, ../../app/stylesheets/screen.scss */
 body.one-col #content {
   display: inline;
   float: left;

@@ -1,0 +1,15 @@
+body.bp {
+	.actions {
+		text-align: right;
+		.action {
+			margin: 0 6px;
+			@include sassy-button("simple", 10px, 24px, #4FD82A, #2B7717, #FFF, "inset");
+			&.yellow {
+				@include sassy-button("simple", 10px, 24px, #E4EA48, #777214, #FFF, "inset");
+			}			
+			&.blue {
+				@include sassy-button("simple", 10px, 24px, #52B1D8, #224077, #FFF, "inset");
+			}
+		}
+	}
+}

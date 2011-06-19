@@ -66,10 +66,5 @@ body.home {
 			margin-bottom: 0;
 		}
 	}
-
-	.inside {
-		@include clearfix;
-		padding: $blueprint-grid-width / 2;	
-	}
 }
 

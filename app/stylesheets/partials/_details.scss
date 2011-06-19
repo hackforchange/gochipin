@@ -1,0 +1,30 @@
+body.bp.details {
+	.details {
+		background-color: #FFF;
+		@include border-radius($default-border-radius);
+		@include column($blueprint-grid-columns / 2);		
+	}
+
+	.actions {
+		@include min-height(175px);
+		background-color: #FFF;
+		@include border-radius($default-border-radius);
+		@include column($blueprint-grid-columns / 2, true);		
+		@include append-bottom($blueprint-grid-width/2);
+		p:first-child {
+			margin: 0 0 1em 0;
+		}
+		p:last-child {
+			margin: 0;
+		}
+		
+		.img {			
+			text-align: right;
+		}
+	}
+	
+	#map {
+		@include clearfix;	
+		width: span(24) - $blueprint-grid-width/2;
+	}
+}
