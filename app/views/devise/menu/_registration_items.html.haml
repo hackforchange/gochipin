@@ -1,7 +1,7 @@
 - if user_signed_in?
-  %p Signed in as #{current_user.name}
+  %li Signed in as #{current_user.name}
   %li
-    = link_to('Edit account', edit_user_registration_path)
+    = link_to(image_tag('gear.png') << ' Edit account', edit_user_registration_path)
 - else
   %li
     = link_to('Sign up', new_user_registration_path)

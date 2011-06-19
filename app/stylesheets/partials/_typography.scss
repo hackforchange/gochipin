@@ -1,0 +1,28 @@
+body.bp {
+	#title {
+		background: transparent image-url('header.png') top left no-repeat;
+		h1 {
+			color: #FFF !important; 
+			font-family: 'Carter One', arial, serif;
+			font-size: 5em !important;
+			text-shadow: -1px 1px #3FAD21, -2px 2px #3FAD21, -3px 3px #3FAD21, -4px 4px #3FAD21;
+			-webkit-transition: all 0.12s ease-out;
+			-moz-transition: all 0.12s ease-out;
+			-o-transition: all 0.12s ease-out;
+			padding-left: 50px;
+			position: relative; top: -3px; left: 3px;
+			a {
+				color: #FFF;
+				text-decoration: none;
+			}
+		}
+		h1:hover {
+		   position: relative; top: -6px; left: 6px;
+		   text-shadow: -1px 1px #35931C, -2px 2px #35931C, -3px 3px #35931C, -4px 4px #35931C, -5px 5px #35931C, -6px 6px #35931C;
+		}
+	}
+	
+	.right {
+		text-align: right;
+	}	
+}

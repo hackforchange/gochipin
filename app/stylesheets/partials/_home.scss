@@ -1,0 +1,75 @@
+body.home {
+	#container {
+		@include container;
+	}
+
+	#create {
+		background-color: #FFF;
+		@include border-radius($default-border-radius);
+		@include column($blueprint-grid-columns / 2);
+
+		h2 {
+			background: transparent image-url('calendar.png') 0 center no-repeat;
+			padding-left: 32px;
+		}
+		form {
+			label {
+				font-size: 1.5em;
+				color: $quiet-color;
+				margin-left: 0.25em;
+				font-style: italic;
+			}
+			input {
+				font-size: 2.5em;
+				@include border-radius($default-border-radius);
+			}
+			input[type="submit"] {
+				margin-top: 0.5em;
+				@include sassy-button("simple", 10px, 36px, #4FD82A, #2B7717, #FFF, "inset");
+				font-family: 'Carter One', arial, serif;
+			}
+		}
+	}
+
+	#volunteer {
+		background-color: #FFF;
+		@include border-radius($default-border-radius);
+		@include column($blueprint-grid-columns / 2, true);
+
+		.header {
+			@include column($blueprint-grid-columns / 4, true);
+			h2 {
+				background: transparent image-url('group.png') 0 center no-repeat;
+				padding-left: 36px;		
+			}
+		}
+		
+		.upcoming {
+			@include prepend-top($blueprint-grid-width/2);
+			@include column(($blueprint-grid-columns / 4) - 1, true);
+			ul {
+				@include no-bullets;
+				margin:0;
+				padding:0;
+				font-size: 1.1em;
+				
+				li {
+					a:after {
+					  content: " →";
+					  font-size: 90%;
+					}
+					
+				}
+			}
+		}
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+
+	.inside {
+		@include clearfix;
+		padding: $blueprint-grid-width / 2;	
+	}
+}
+

@@ -1,0 +1,28 @@
+body.bp {
+  #header {
+	height: $blueprint-grid-width;
+	background-color: $dark-background-color;
+	color: $light-color;
+	border-bottom: 4px solid $dark-color;
+	margin-bottom: 1em;
+    ul {
+      	@include horizontal-list;
+		float: right;
+		margin-top: $blueprint-grid-width / 4;
+		margin-right: $blueprint-grid-width / 4;
+		li {
+			img {
+				vertical-align: text-bottom;
+			}
+		}
+    }
+
+	a:link, a:visited, a:hover, a:active {
+		color: darken($light-color, 10%);
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+  }
+}

@@ -1,3 +1,4 @@
+- title("#{@event.title} - #{@event.time.to_s(:mdy)}")
 %p#notice= notice
 
 %p
@@ -8,12 +9,13 @@
   = @event.description
 %p
   %b When:
-  = @event.time
+  = @event.time.to_s(:pretty)
 
 %p
   %b Where:
   = @event.location.address
   = "#{@event.location.latitude}, #{@event.location.longitude}"
+  = render :partial => 'shared/map', :locals => {:features => [@event].collect{|e| e.to_feature}.to_json}
   
 %p
 - if current_user and current_user === @event.user

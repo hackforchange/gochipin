@@ -1,12 +1,12 @@
 = form_for @event do |f|
   .field
-    = f.label 'What'
     = f.text_field :title, {:placeholder => 'Mt. Sutro Trail Work Day'}
+    = f.label 'What'    
   .field
-    = f.label :where
     = f.text_field :where, {:placeholder => '100 Medical Center Way, Woods Lot'}
+    = f.label :where    
   .field
-    = f.label :when
     = f.text_field :when, {:placeholder => 'Next Saturday at 9am'}
+    = f.label :when     
   .actions
-    = f.submit 'Go'
+    = f.submit "Create →"
