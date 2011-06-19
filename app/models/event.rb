@@ -7,9 +7,11 @@ class Event
   field :time, :type => Time
   
   validates_presence_of :title, :time, :user
+  validate :has_where_or_location
 
   has_one :location, :dependent => :destroy
   belongs_to :user
+  has_many :attendees, :class_name => 'User'
   
   after_save :assign_location
 
@@ -22,9 +24,14 @@ class Event
   def where=(address)
     @address = address
   end
-  
 
   private
+
+    def has_where_or_location
+      unless (@address or @location)
+        errors.add :base, "An event location is required."
+      end
+    end
   
     def assign_location
       if @address

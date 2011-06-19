@@ -2,11 +2,13 @@ require 'spec_helper'
 
 describe Event do
   before(:each) do 
+    attendees = 5.times.collect{Factory(:user)}
     @attr = {
       :title => "My Event",
       :description => "A description",
       :time => Time.new,
       :user => Factory(:user),
+      :attendees => [attendees],
       :location => Factory(:location)
     }
   end
@@ -30,8 +32,7 @@ describe Event do
     no_user_event.should_not be_valid
   end  
   
-  it "should require a location" do
-    pending("location or where, at least one, but not both")
+  it "should require a location or where" do
     no_location_event = Event.new(@attr.merge(:location => nil))
     no_location_event.should_not be_valid
   end  
