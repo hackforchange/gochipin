@@ -101,7 +101,7 @@ class EventsController < ApplicationController
   def sms
     @event = Event.find(params[:id])
     respond_to do |format|
-      if @event.sms(params[:to])
+      if @event.sms(params[:to_number])
         format.html { redirect_to(@event, :notice => 'Event was successfully shared.') }
         format.xml  { render :xml => @event, :status => :created, :location => @event }
       else

@@ -40,6 +40,24 @@ class Event
       }
     }
   end
+  
+
+  LOG = Logger.new(STDOUT)
+  def sms(to_number)
+  account = Twilio::RestAccount.new(ENV['TWILIO_SID'], ENV['TWILIO_KEY'])
+  LOG.debug("SID #{ENV['TWILIO_SID']}")
+    t = {
+        'From' => '+14155992671',
+        'To'   => to_number,
+        'Body' => "2803-5593 Hello, world. This is a text from Twilio using Ruby!"
+    }
+    url = "/2010-04-01/Accounts/#{ENV['TWILIO_SID']}/SMS/Messages"
+    resp = account.request(url, "POST", t)
+    LOG.debug("SENT SMS------------")
+    LOG.debug(url)
+    LOG.debug(resp.inspect)
+    LOG.debug(resp.body)
+  end
 
   private
 
