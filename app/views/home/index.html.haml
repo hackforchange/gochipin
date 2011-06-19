@@ -61,7 +61,7 @@
         c.parentNode.replaceChild(g, c);
 
         $(g).qtip({
-           content: ['<a href="#">', f.data.geometry.properties.title, '</a>'].join(''),
+           content: ['<a href="/events/', f.data.id ,'">', f.data.geometry.properties.title, '</a>'].join(''),
            show: 'mouseover',
            hide: { fixed: true, delay: 1000 },
            position: {
