@@ -81,9 +81,9 @@ class EventsController < ApplicationController
     end
   end
   
-  # POST /events/invite
-  # POST /events/invite.xml
-  def invite
+  # POST /events/invitations
+  # POST /events/invitations.xml
+  def invitations
     @event = Event.find(params[:id])
     respond_to do |format|
       if @event.invite

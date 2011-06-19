@@ -17,7 +17,8 @@
   
 %p
 - if current_user and current_user === @event.user
-  = render 'invite_form'
+  RSVP 
+  - #= render 'invite_form'
 - else 
   = render 'rsvp', :locals => {:event => @event}
   
