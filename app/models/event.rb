@@ -49,7 +49,7 @@ class Event
     t = {
         'From' => '+14155992671',
         'To'   => to_number,
-        'Body' => "2803-5593 Hello, world. This is a text from Twilio using Ruby!"
+        'Body' => "2803-5593 #{user.name} want to share #{title} with you!"
     }
     url = "/2010-04-01/Accounts/#{ENV['TWILIO_SID']}/SMS/Messages"
     resp = account.request(url, "POST", t)
