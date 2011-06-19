@@ -46,4 +46,26 @@ describe Event do
     })
     event.location.should_not be_nil
   end
+  
+  it "can be represented as a geoJson feature" do
+    event = Event.create!({
+      :user => @attr[:user],
+      :title => @attr[:title],
+      :when => "Next Saturday at 9am",
+      :where => "139 Townsend St. San Francisco, CA 94107"
+    })
+    event.to_feature.should eq({      
+      :id => event.id,
+      :type => "Feature",
+      :geometry => {
+        :type => "Point",
+        :coordinates => [event.location.longitude, event.location.latitude],
+        :properties => {
+          :title => event.title,
+          :address => event.location.address,
+          :time => event.time
+        }
+      }
+    })
+  end
 end

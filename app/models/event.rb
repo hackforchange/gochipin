@@ -24,6 +24,22 @@ class Event
   def where=(address)
     @address = address
   end
+  
+  def to_feature
+    {      
+      :id => id,
+      :type => "Feature",
+      :geometry => {
+        :type => "Point",
+        :coordinates => [location.longitude, location.latitude],
+        :properties => {
+          :title => title,
+          :address => location.address,
+          :time => time
+        }
+      }
+    }
+  end
 
   private
 
