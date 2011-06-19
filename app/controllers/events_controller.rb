@@ -80,4 +80,19 @@ class EventsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # POST /events/invite
+  # POST /events/invite.xml
+  def invite
+    @event = Event.find(params[:id])
+    respond_to do |format|
+      if @event.invite
+        format.html { redirect_to(@event, :notice => 'Event was successfully created.') }
+        format.xml  { render :xml => @event, :status => :created, :location => @event }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
 end
