@@ -11,5 +11,9 @@ class User
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   has_many :events
+  
+  def owns?(event)
+    id === event.user.id
+  end  
 end
 

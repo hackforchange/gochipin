@@ -1,28 +1,27 @@
 - title("#{@event.title} - #{@event.time.to_s(:mdy)}")
+- body('one-col details')
 
-%p
-  %b Title:
-  = @event.title
-%p
-  %b Description:
-  = @event.description
-%p
-  %b When:
-  = @event.time.to_s(:pretty)
+.details
+  .inside
+    %h1
+      = @event.title
+    %h2
+      = @event.time.to_s(:pretty)
+    %p
+      = @event.description
+    %p
+      = @event.location.address
 
-%p
-  %b Where:
-  = @event.location.address
-  = "#{@event.location.latitude}, #{@event.location.longitude}"
-  = render :partial => 'shared/map', :locals => {:features => [@event].collect{|e| e.to_feature}.to_json}
+.actions
+  .inside
+    %p
+      %button.action RSVP
+      %button.action.yellow Invite
+      %button.action.blue Print
+    %p
+      = image_tag("https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http://#{request.domain}#{request.fullpath}&choe=UTF-8")
+    
+= render :partial => 'shared/map', :locals => {:features => [@event].collect{|e| e.to_feature}.to_json}
   
-%p
-- if current_user and current_user === @event.user
-  RSVP 
-  - #= render 'invite_form'
-- else 
-  = render 'rsvp', :locals => {:event => @event}
-  
-= link_to 'Edit', edit_event_path(@event)
-\|
-= link_to 'Back', events_path
+- if current_user.owns?(@event)
+  = link_to 'Edit', edit_event_path(@event)
