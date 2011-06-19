@@ -1,0 +1,16 @@
+.share
+  %h2.sms SMS
+  = form_tag url_for(:controller => 'events', :action => 'sms') do |f|
+    = hidden_field_tag :id, @event.id
+    -if @event.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
+        %ul
+          - @event.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field
+      = label_tag "To Number"
+      = text_field_tag :to_number, nil, :placeholder => '(415) 555-6789', :size => 20
+      = submit_tag 'Share'      
+  

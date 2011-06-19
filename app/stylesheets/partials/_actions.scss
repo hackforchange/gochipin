@@ -1,6 +1,5 @@
 body.bp {
 	.actions {
-		text-align: right;
 		.action {
 			margin: 0 6px;
 			@include sassy-button("simple", 10px, 24px, #4FD82A, #2B7717, #FFF, "inset");

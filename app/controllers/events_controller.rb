@@ -95,4 +95,19 @@ class EventsController < ApplicationController
       end
     end
   end
+  
+  # POST /events/sms
+  # POST /events/sms.xml
+  def sms
+    @event = Event.find(params[:id])
+    respond_to do |format|
+      if @event.sms(params[:to])
+        format.html { redirect_to(@event, :notice => 'Event was successfully shared.') }
+        format.xml  { render :xml => @event, :status => :created, :location => @event }
+      else
+        format.html { redirect_to(@event, :error => 'Trouble sharing this event.') }
+        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
+      end
+    end
+  end  
 end

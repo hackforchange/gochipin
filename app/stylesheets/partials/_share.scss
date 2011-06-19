@@ -1,0 +1,31 @@
+body.details {
+	.share {
+		margin: ($blueprint-grid-width / 2) 0 0 $blueprint-grid-width;
+		h2.sms {
+			width: 50px;
+			float: left;
+			margin-right: 10px;
+			background: transparent image-url('iphone.png') 0 center no-repeat;
+			padding-left: 24px;
+			margin-top: 0.9em;
+		}
+		form {
+			@include column($blueprint-grid-columns/4 + 2, true);
+			label {
+				font-size: 1.1em;
+				color: $quiet-color;
+				margin-left: 0.25em;
+				margin-bottom: 0;
+				font-style: italic;
+				display:block;
+			}
+			input {
+				font-size: 1.5em;
+				@include border-radius($default-border-radius);
+			}
+			input[type="submit"] {
+				@include sassy-button("matte", 10px, 16px, #cede85, #a7bf35, #fff, "inset")
+			}
+		}
+	}
+}

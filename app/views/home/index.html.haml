@@ -15,7 +15,7 @@
     .upcoming
       %p Upcoming:    
       %ul
-        - @events.each do |event|
+        - @events[0..2].each do |event|
           %li #{link_to event.title, event}
 
   .inside

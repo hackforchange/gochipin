@@ -14,12 +14,12 @@
 
 .actions
   .inside
-    %p
-      %button.action RSVP
-      %button.action.yellow Invite
-      %button.action.blue Print
-    %p
-      = image_tag("https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http://#{request.domain}#{request.fullpath}&choe=UTF-8")
+    %button.action RSVP
+    %button.action.yellow Invite
+    %button.action.blue Print
+
+    = render 'sms'
+    /= image_tag("https://chart.googleapis.com/chart?chs=75x75&cht=qr&chl=http://#{request.domain}#{request.fullpath}&choe=UTF-8")
     
 = render :partial => 'shared/map', :locals => {:features => [@event].collect{|e| e.to_feature}.to_json}
   

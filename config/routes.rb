@@ -1,14 +1,12 @@
 Gochipin::Application.routes.draw do
-  resources :events
-
-  #get \"users\/show\"
-
   root :to => "home#index"
   match 'about' => 'home#about'
 
   devise_for :users
   resources :users, :only => :show
 
+  resources :events
+  match 'events/sms', :controller => :events, :action => :sms
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

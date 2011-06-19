@@ -159,11 +159,7 @@ body.bp .flash {
   text-align: center;
 }
 
-/* line 2, ../../app/stylesheets/partials/_actions.scss */
-body.bp .actions {
-  text-align: right;
-}
-/* line 4, ../../app/stylesheets/partials/_actions.scss */
+/* line 3, ../../app/stylesheets/partials/_actions.scss */
 body.bp .actions .action {
   margin: 0 6px;
   display: inline-block;
@@ -199,7 +195,7 @@ body.bp .actions .action:hover {
   background: -o-linear-gradient(#61dc40, #338c1b);
   background: linear-gradient(#61dc40, #338c1b);
 }
-/* line 7, ../../app/stylesheets/partials/_actions.scss */
+/* line 6, ../../app/stylesheets/partials/_actions.scss */
 body.bp .actions .action.yellow {
   display: inline-block;
   width: auto;
@@ -234,7 +230,7 @@ body.bp .actions .action.yellow:hover {
   background: -o-linear-gradient(#e7ed5f, #8d8718);
   background: linear-gradient(#e7ed5f, #8d8718);
 }
-/* line 10, ../../app/stylesheets/partials/_actions.scss */
+/* line 9, ../../app/stylesheets/partials/_actions.scss */
 body.bp .actions .action.blue {
   display: inline-block;
   width: auto;
@@ -471,11 +467,7 @@ body.bp.details .actions p:first-child {
 body.bp.details .actions p:last-child {
   margin: 0;
 }
-/* line 21, ../../app/stylesheets/partials/_details.scss */
-body.bp.details .actions .img {
-  text-align: right;
-}
-/* line 26, ../../app/stylesheets/partials/_details.scss */
+/* line 22, ../../app/stylesheets/partials/_details.scss */
 body.bp.details #map {
   overflow: hidden;
   *zoom: 1;
@@ -543,7 +535,86 @@ div#map {
   fill: #666;
 }
 
-/* line 41, ../../app/stylesheets/screen.scss */
+/* line 2, ../../app/stylesheets/partials/_share.scss */
+body.details .share {
+  margin: 15px 0 0 30px;
+}
+/* line 4, ../../app/stylesheets/partials/_share.scss */
+body.details .share h2.sms {
+  width: 50px;
+  float: left;
+  margin-right: 10px;
+  background: transparent url('/images/iphone.png?1287173340') 0 center no-repeat;
+  padding-left: 24px;
+  margin-top: 0.9em;
+}
+/* line 12, ../../app/stylesheets/partials/_share.scss */
+body.details .share form {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+}
+/* line 147, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.details .share form {
+  overflow-x: hidden;
+}
+/* line 14, ../../app/stylesheets/partials/_share.scss */
+body.details .share form label {
+  font-size: 1.1em;
+  color: #666666;
+  margin-left: 0.25em;
+  margin-bottom: 0;
+  font-style: italic;
+  display: block;
+}
+/* line 22, ../../app/stylesheets/partials/_share.scss */
+body.details .share form input {
+  font-size: 1.5em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 26, ../../app/stylesheets/partials/_share.scss */
+body.details .share form input[type="submit"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0.5em 1.5em;
+  line-height: 1.2em;
+  border-style: solid;
+  border-width: 1px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #cede85;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefffd), color-stop(3%, #cede85), color-stop(70%, #a7bf35));
+  background: -webkit-linear-gradient(#fefffd, #cede85 3%, #a7bf35 70%);
+  background: -moz-linear-gradient(#fefffd, #cede85 3%, #a7bf35 70%);
+  background: -o-linear-gradient(#fefffd, #cede85 3%, #a7bf35 70%);
+  background: linear-gradient(#fefffd, #cede85 3%, #a7bf35 70%);
+  border-color: #a7bf35;
+  color: white;
+  text-shadow: #a5be34, 0 -1px 0;
+}
+/* line 11, ../../../.rvm/gems/ruby-1.9.2-p180/gems/sassy-buttons-0.0.5/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+body.details .share form input[type="submit"]:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefffd), color-stop(3%, #d6e399), color-stop(75%, #b3cb43));
+  background: -webkit-linear-gradient(#fefffd, #d6e399 3%, #b3cb43 75%);
+  background: -moz-linear-gradient(#fefffd, #d6e399 3%, #b3cb43 75%);
+  background: -o-linear-gradient(#fefffd, #d6e399 3%, #b3cb43 75%);
+  background: linear-gradient(#fefffd, #d6e399 3%, #b3cb43 75%);
+}
+
+/* line 42, ../../app/stylesheets/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica", Arial, sans-serif;
@@ -863,11 +934,11 @@ body.bp .removed {
   background: #990000;
   color: white;
 }
-/* line 47, ../../app/stylesheets/screen.scss */
+/* line 48, ../../app/stylesheets/screen.scss */
 body.bp #container {
   padding-top: 1em;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 51, ../../app/stylesheets/screen.scss */
 body.bp .content {
   background-color: #FFF;
   -moz-border-radius: 8px;
@@ -885,7 +956,7 @@ body.bp .content {
 * html body.bp .content {
   overflow-x: hidden;
 }
-/* line 55, ../../app/stylesheets/screen.scss */
+/* line 56, ../../app/stylesheets/screen.scss */
 body.bp .inside {
   overflow: hidden;
   *zoom: 1;
@@ -956,14 +1027,14 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 67, ../../app/stylesheets/screen.scss */
+/* line 68, ../../app/stylesheets/screen.scss */
 body.one-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 70, ../../app/stylesheets/screen.scss */
+/* line 71, ../../app/stylesheets/screen.scss */
 body.one-col #content {
   display: inline;
   float: left;
