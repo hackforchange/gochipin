@@ -4,7 +4,7 @@
   %tr
     %th Title
     %th Description
-    %th Date
+    %th Time
     %th
     %th
     %th
@@ -13,7 +13,7 @@
     %tr
       %td= event.title
       %td= event.description
-      %td= event.date
+      %td= event.time
       %td= link_to 'Show', event
       %td= link_to 'Edit', edit_event_path(event)
       %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete

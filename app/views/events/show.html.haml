@@ -7,8 +7,13 @@
   %b Description:
   = @event.description
 %p
-  %b Date:
-  = @event.date
+  %b When:
+  = @event.time
+
+%p
+  %b Where:
+  = @event.location.address
+  = "#{@event.location.latitude}, #{@event.location.longitude}"
 
 = link_to 'Edit', edit_event_path(@event)
 \|

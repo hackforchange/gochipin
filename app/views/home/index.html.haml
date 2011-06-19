@@ -8,5 +8,6 @@
 
 %h5 Go chip in
 
+%ul
 - @events.each do |event|
-  %p Event: #{link_to event.title, title}  
+  %li #{link_to event.title, event}  

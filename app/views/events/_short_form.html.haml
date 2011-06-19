@@ -3,10 +3,10 @@
     = f.label 'What'
     = f.text_field :title, {:placeholder => 'Mt. Sutro Trail Work Day'}
   .field
-    = label 'Where'
-    = text_field :where, {:placeholder => '100 Medical Center Way, Woods Lot'}
+    = f.label :where
+    = f.text_field :where, {:placeholder => '100 Medical Center Way, Woods Lot'}
   .field
-    = f.label 'When'
+    = f.label :when
     = f.text_field :when, {:placeholder => 'Next Saturday at 9am'}
   .actions
     = f.submit 'Go'

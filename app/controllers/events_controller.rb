@@ -41,9 +41,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.xml
   def create
-    @event = Event.new(params[:event])
-    @event.user = current_user
-
+    @event = Event.new(params[:event].merge(:user => current_user))
     respond_to do |format|
       if @event.save
         format.html { redirect_to(@event, :notice => 'Event was successfully created.') }

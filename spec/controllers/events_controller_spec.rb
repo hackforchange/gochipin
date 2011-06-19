@@ -85,6 +85,19 @@ describe EventsController do
           post :create, :event => valid_attributes
         }.to change(Event, :count).by(1)
       end
+      
+      it "creates a new Event with fuzzy parameters" do
+        expect {
+          post :create, :event => {:user => @user,
+            :title => "My Event",
+            :when => "Next Saturday at 9am",
+            :where => "139 Townsend St. San Francisco, CA 94107"
+          }
+        }.to change(Event, :count).by(1)
+        assigns(:event).should be_a(Event)
+        assigns(:event).should be_persisted
+        assigns(:event).location.should be_a(Location)
+      end
 
       it "assigns a newly created event as @event" do
         post :create, :event => valid_attributes
