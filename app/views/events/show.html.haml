@@ -14,7 +14,13 @@
   %b Where:
   = @event.location.address
   = "#{@event.location.latitude}, #{@event.location.longitude}"
-
+  
+%p
+- if current_user and current_user === @event.user
+  = render 'invite_form'
+- else 
+  = render 'rsvp', :locals => {:event => @event}
+  
 = link_to 'Edit', edit_event_path(@event)
 \|
 = link_to 'Back', events_path
