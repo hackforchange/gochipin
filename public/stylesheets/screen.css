@@ -99,9 +99,8 @@ body.bp #header {
   background-color: #333333;
   color: #e0e0e0;
   border-bottom: 4px solid #2e2e2e;
-  margin-bottom: 1em;
 }
-/* line 8, ../../app/stylesheets/partials/_header.scss */
+/* line 7, ../../app/stylesheets/partials/_header.scss */
 body.bp #header ul {
   margin: 0;
   padding: 0;
@@ -135,18 +134,24 @@ body.bp #header ul li:last-child {
 body.bp #header ul li.last {
   padding-right: 0;
 }
-/* line 14, ../../app/stylesheets/partials/_header.scss */
+/* line 13, ../../app/stylesheets/partials/_header.scss */
 body.bp #header ul li img {
   vertical-align: text-bottom;
 }
-/* line 20, ../../app/stylesheets/partials/_header.scss */
+/* line 19, ../../app/stylesheets/partials/_header.scss */
 body.bp #header a:link, body.bp #header a:visited, body.bp #header a:hover, body.bp #header a:active {
   color: #c7c7c7;
   text-decoration: none;
 }
-/* line 24, ../../app/stylesheets/partials/_header.scss */
+/* line 23, ../../app/stylesheets/partials/_header.scss */
 body.bp #header a:hover {
   text-decoration: underline;
+}
+
+/* line 2, ../../app/stylesheets/partials/_flash.scss */
+body.bp .flash {
+  border-width: 0 0 4px 0 !important;
+  text-align: center;
 }
 
 /* line 2, ../../app/stylesheets/partials/_home.scss */
@@ -369,7 +374,7 @@ div#map {
   fill: #666;
 }
 
-/* line 37, ../../app/stylesheets/screen.scss */
+/* line 38, ../../app/stylesheets/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -689,6 +694,10 @@ body.bp .removed {
   background: #990000;
   color: white;
 }
+/* line 44, ../../app/stylesheets/screen.scss */
+body.bp #container {
+  padding-top: 1em;
+}
 
 /* line 18, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_form.scss */
 form.bp label {
@@ -754,14 +763,14 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 54, ../../app/stylesheets/screen.scss */
 body.one-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 53, ../../app/stylesheets/screen.scss */
+/* line 57, ../../app/stylesheets/screen.scss */
 body.one-col #content {
   display: inline;
   float: left;

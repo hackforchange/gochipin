@@ -27,6 +27,7 @@
 
 @import "partials/typography";
 @import "partials/header";
+@import "partials/flash";
 @import "partials/home";
 @import "partials/map";                                                    
 
@@ -40,6 +41,9 @@ body.bp {
   @include blueprint-debug;
   @include blueprint-interaction;
   background-color: $blueprint-background-color;
+  #container {
+	padding-top: 1em;
+  }
 }
 
 form.bp {

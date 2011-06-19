@@ -44,7 +44,7 @@ class Event
   private
 
     def has_where_or_location
-      unless (@address or @location)
+      unless (@address or location)
         errors.add :base, "An event location is required."
       end
     end

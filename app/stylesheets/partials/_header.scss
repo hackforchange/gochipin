@@ -4,7 +4,6 @@ body.bp {
 	background-color: $dark-background-color;
 	color: $light-color;
 	border-bottom: 4px solid $dark-color;
-	margin-bottom: 1em;
     ul {
       	@include horizontal-list;
 		float: right;
