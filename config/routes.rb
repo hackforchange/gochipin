@@ -4,6 +4,7 @@ Gochipin::Application.routes.draw do
   #get \"users\/show\"
 
   root :to => "home#index"
+  match 'about' => 'home#about'
 
   devise_for :users
   resources :users, :only => :show

@@ -6,4 +6,8 @@ class HomeController < ApplicationController
     geoip = Geokit::Geocoders::MultiGeocoder.geocode(request.remote_ip)
     @user_location = (geoip.city and geoip.state) ? "#{geoip.city}, #{geoip.state}" : "San Francisco, CA"
   end
+  
+  def about
+    
+  end
 end

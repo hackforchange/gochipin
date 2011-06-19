@@ -4,7 +4,7 @@ body.bp {
 	background-color: $dark-background-color;
 	color: $light-color;
 	border-bottom: 4px solid $dark-color;
-    ul {
+    ul, ul.about {
       	@include horizontal-list;
 		float: right;
 		margin-top: $blueprint-grid-width / 4;
@@ -15,6 +15,11 @@ body.bp {
 			}
 		}
     }
+
+ 	ul.about {
+		float: left;
+		margin-left: $blueprint-grid-width / 4;
+	}
 
 	a:link, a:visited, a:hover, a:active {
 		color: darken($light-color, 10%);

@@ -39,14 +39,19 @@
 // what pages use blueprint when stylesheets are concatenated together.
 
 body.bp {
-  @include blueprint-typography(true);
-  @include blueprint-utilities;
-  @include blueprint-debug;
-  @include blueprint-interaction;
-  background-color: $blueprint-background-color;
-  #container {
-	padding-top: 1em;
-  }
+	@include blueprint-typography(true);
+	@include blueprint-utilities;
+	@include blueprint-debug;
+	@include blueprint-interaction;
+	background-color: $blueprint-background-color;
+	#container {
+		padding-top: 1em;
+	}
+	.content {
+		background-color: #FFF;
+		@include border-radius($default-border-radius);
+		@include column($blueprint-grid-columns,true);		
+	}
 	.inside {
 		@include clearfix;
 		padding: $blueprint-grid-width / 2;	
@@ -55,15 +60,15 @@ body.bp {
 }
 
 form.bp {
-  @include blueprint-form;
+	@include blueprint-form;
 }
 
 body.one-col {
-  #container {
-    @include container;
-  }
-  #content {
-    $content-columns: $blueprint-grid-columns;
-    @include column($content-columns, true);
-  }	
+	#container {
+		@include container;
+	}
+	#content {
+		$content-columns: $blueprint-grid-columns;
+		@include column($content-columns, true);
+	}	
 }

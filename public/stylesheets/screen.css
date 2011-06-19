@@ -101,7 +101,7 @@ body.bp #header {
   border-bottom: 4px solid #2e2e2e;
 }
 /* line 7, ../../app/stylesheets/partials/_header.scss */
-body.bp #header ul {
+body.bp #header ul, body.bp #header ul.about {
   margin: 0;
   padding: 0;
   border: 0;
@@ -112,7 +112,7 @@ body.bp #header ul {
   margin-right: 7.5px;
 }
 /* line 60, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body.bp #header ul li {
+body.bp #header ul li, body.bp #header ul.about li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0px;
@@ -123,27 +123,32 @@ body.bp #header ul li {
   padding-right: 4px;
 }
 /* line 48, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body.bp #header ul li:first-child, body.bp #header ul li.first {
+body.bp #header ul li:first-child, body.bp #header ul li.first, body.bp #header ul.about li:first-child, body.bp #header ul.about li.first {
   padding-left: 0;
 }
 /* line 49, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body.bp #header ul li:last-child {
+body.bp #header ul li:last-child, body.bp #header ul.about li:last-child {
   padding-right: 0;
 }
 /* line 50, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-body.bp #header ul li.last {
+body.bp #header ul li.last, body.bp #header ul.about li.last {
   padding-right: 0;
 }
 /* line 13, ../../app/stylesheets/partials/_header.scss */
-body.bp #header ul li img {
+body.bp #header ul li img, body.bp #header ul.about li img {
   vertical-align: text-bottom;
 }
 /* line 19, ../../app/stylesheets/partials/_header.scss */
+body.bp #header ul.about {
+  float: left;
+  margin-left: 7.5px;
+}
+/* line 24, ../../app/stylesheets/partials/_header.scss */
 body.bp #header a:link, body.bp #header a:visited, body.bp #header a:hover, body.bp #header a:active {
   color: #c7c7c7;
   text-decoration: none;
 }
-/* line 23, ../../app/stylesheets/partials/_header.scss */
+/* line 28, ../../app/stylesheets/partials/_header.scss */
 body.bp #header a:hover {
   text-decoration: underline;
 }
@@ -610,11 +615,11 @@ body.bp p .right {
 /* line 62, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body.bp a {
   text-decoration: underline;
-  color: #0066cc;
+  color: #68bada;
 }
 /* line 18, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 body.bp a:visited {
-  color: #004c99;
+  color: #3fa7d0;
 }
 /* line 21, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 body.bp a:focus {
@@ -626,7 +631,7 @@ body.bp a:hover {
 }
 /* line 27, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 body.bp a:active {
-  color: #bf00ff;
+  color: #bd91e4;
 }
 /* line 63, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body.bp blockquote {
@@ -863,6 +868,24 @@ body.bp #container {
   padding-top: 1em;
 }
 /* line 50, ../../app/stylesheets/screen.scss */
+body.bp .content {
+  background-color: #FFF;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, ../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body.bp .content {
+  overflow-x: hidden;
+}
+/* line 55, ../../app/stylesheets/screen.scss */
 body.bp .inside {
   overflow: hidden;
   *zoom: 1;
@@ -933,14 +956,14 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 62, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 body.one-col #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 65, ../../app/stylesheets/screen.scss */
+/* line 70, ../../app/stylesheets/screen.scss */
 body.one-col #content {
   display: inline;
   float: left;

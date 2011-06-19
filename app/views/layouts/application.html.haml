@@ -17,6 +17,9 @@
     = csrf_meta_tag
   %body{:class=>"bp #{yield_for(:body, 'one-col')}"}
     #header
+      %ul.about
+        %li 
+          = link_to(image_tag('info.png') << ' About', '/about')
       %ul
         = render 'devise/menu/registration_items'
         = render 'devise/menu/login_items'
