@@ -12,3 +12,5 @@ gem "launchy", "0.4.0", :group => :test
 gem "bson_ext", "1.3.1"
 gem "mongoid", "2.0.2"
 gem "devise", "1.3.4"
+gem "geokit"
+gem "chronic"

@@ -34,4 +34,13 @@ describe Event do
     no_location_event = Event.new(@attr.merge(:location => nil))
     no_location_event.should_not be_valid
   end  
+  
+  it "should create a new instance given fuzzy attributes" do
+    Event.create!({
+      :user => @attr[:user],
+      :title => @attr[:title],
+      :when => "Next Saturday at 9am",
+      :where => "139 Townsend St. San Francisco, CA 94107"
+    })
+  end
 end
